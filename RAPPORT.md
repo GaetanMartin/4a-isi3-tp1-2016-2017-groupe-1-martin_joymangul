@@ -1,6 +1,6 @@
-**Nom/Prénom Etudiant 1 :**
+**Nom/Prénom Etudiant 1 : MARTIN Gaëtan**
 
-**Nom/Prénom Etudiant 2 :**
+**Nom/Prénom Etudiant 2 : JOYMANGUL Jensen**
 
 # Rapport TP1
 

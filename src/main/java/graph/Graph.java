@@ -1,11 +1,7 @@
 package graph;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class Graph implements IDirectedGraph {
@@ -18,9 +14,7 @@ public class Graph implements IDirectedGraph {
 	public Graph(){
 		
 		adjacence = new HashMap<Node,List<Arc>>();
-		
-		
-	
+
 	}
 	/**
 	 * 
@@ -49,16 +43,12 @@ public class Graph implements IDirectedGraph {
 	
 	}
 	
-	public List<Node> getAllNodes(){
-		//A COMPLETER
-		
-		return null;
+	public Set<Node> getAllNodes(){
+		return adjacence.keySet();
 	}
 	
 	public int getNbNodes(){
-		//A COMPLETER
-		
-		return 0;
+		return getAllNodes().size();
 	}
 	
 	/**
@@ -74,8 +64,9 @@ public class Graph implements IDirectedGraph {
 	 * renvoie tous les noeuds qui sont destination d'un arc dont la source est _n
 	 */
 	public List<Node> getAdjNodes(Node _n){
-		//A COMPLETER
-		return null;
+	    return getArc(_n).stream()
+                .map(Arc::getDestination)
+                .collect(Collectors.toList());
 	}
 	
 	
