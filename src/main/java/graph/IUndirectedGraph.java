@@ -10,7 +10,10 @@ public interface IUndirectedGraph extends IGraph{
 	 * 
 	 */
 	public void addEdge(Node _node1,Node _node2);
-	/**
+
+    void addEdge(Node _node1, Node _node2, Label valuation);
+
+    /**
 	 *  @return vrai si le graph possede une arrete entre les noeuds _n1 et _n2
 	 * 
 	 */

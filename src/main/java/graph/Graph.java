@@ -68,9 +68,13 @@ public class Graph implements IDirectedGraph {
                 .map(Arc::getDestination)
                 .collect(Collectors.toList());
 	}
-	
 
-	@Override
+    @Override
+    public Iterator<Node> creerBFSIterator(Node n) {
+        return new BFSIterator(this, n);
+    }
+
+    @Override
 	public String toString() {
 	    StringBuilder stb = new StringBuilder();
 		stb.append("Graph \n");
