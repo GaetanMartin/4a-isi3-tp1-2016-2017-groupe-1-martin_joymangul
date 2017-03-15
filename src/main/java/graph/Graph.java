@@ -69,17 +69,16 @@ public class Graph implements IDirectedGraph {
                 .collect(Collectors.toList());
 	}
 	
-	
 
 	@Override
 	public String toString() {
-		String s="Graph \n";
-		//A COMPLETER
-		
-		
-		return s;
+	    StringBuilder stb = new StringBuilder();
+		stb.append("Graph \n");
+        for (Node node : getAllNodes()){
+            stb.append(node);
+            stb.append(getArc(node));
+            stb.append("\n");
+        }
+		return stb.toString();
 	}
-
-
-	
 }

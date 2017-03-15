@@ -50,7 +50,11 @@ public class Node {
     
 	@Override
 	public String toString() {
-		return ""+label;
+		StringBuilder stb = new StringBuilder();
+		stb.append("[noeud=");
+		stb.append(this.getLabel().toString());
+		stb.append("] : ");
+		return stb.toString();
 	}
 
 
