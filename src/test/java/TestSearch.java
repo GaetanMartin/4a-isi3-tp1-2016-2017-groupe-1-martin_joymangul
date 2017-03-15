@@ -7,11 +7,12 @@ import graph.IGraph;
 import graph.IUndirectedGraph;
 import graph.Node;
 import graph.StringLabel;
-import graph.UndirectedGraph;
+// import graph.UndirectedGraph;
 
 public class TestSearch {
 
 	public static void main(String[] args) {
+		/*
 		//exemple wikipedia: graph oriente
 		Node na = new Node(new StringLabel("A"));
 		Node nb = new Node(new StringLabel("B"));
@@ -69,5 +70,6 @@ public class TestSearch {
 		System.out.println("dfs:");
 		while (iterugDFS.hasNext())
 			System.out.println(iterugDFS.next());
+	*/
 	}
 }
