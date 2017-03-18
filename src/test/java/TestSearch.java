@@ -1,6 +1,6 @@
-import java.util.Iterator;
-
 import graph.*;
+
+import java.util.Iterator;
 // import graph.UndirectedGraph;
 
 public class TestSearch {
@@ -58,7 +58,10 @@ public class TestSearch {
 		Iterator<Node> iterugBFS= ug.creerBFSIterator(na);
 		System.out.println("bfs:");
 		while (iterugBFS.hasNext())
+		{
 			System.out.println(iterugBFS.next());
+
+		}
 
 //		Iterator<Node> iterugDFS= ug.creerDFSIterator(na);
 //		System.out.println("dfs:");
