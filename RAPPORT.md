@@ -41,10 +41,50 @@ Pour réaliser cela, la methode fait appel au toString() de des noeuds et des ar
 L 'appel aux methodes toString() est gérer automatiquement en Java dans la focntion append()
 
 ## Question 2
-*Expliquer le code ajouté et insérer un schéma du patron de conception mis en place*
+**Patron de conception**
 
-## Question 3
-*Expliquer le code ajouté et insérer un schéma du patron de conception mis en place*
+![Package graph](images/exo2.png)
 
-## Question 4
-*Expliquer le code ajouté et insérer un schéma du patron de conception mis en place*
+## Question 3 / Question 4
+Le code pour le parcour en profondeur et en largeur se ressemble, la seule différence est dans le parcour en profondeur on utilise une file alors pour le parcour en largeur, on utilise une pile.
+
+Afin de limiter la duplication de code le pattern suivant est appliqué:
+
+![Package graph](images/exo3.png)
+
+Dans la classe abstraite GraphIterator possède le code pour parcourir le graph cependant seulement le pop() doit être surchargé dans les classes BFSIterator et DFSIterator
+```java
+ public Object next() {
+    if (!hasNext()) {
+        throw new NoSuchElementException();
+    } else {
+        Node node = this.pop();
+        for (Node neighbour : graph.getAdjNodes(node)) {
+            if (! this.visited.contains(neighbour)) {
+                this.collection.add(neighbour);
+                this.visited.add(neighbour);
+            }
+        }
+        return node;
+    }
+}
+
+protected Node pop() {
+    // TO OVERRIDE
+    return collection.getFirst();
+}
+````
+
+Le pop() de BFSIterator:
+```java
+protected Node pop() {
+    return this.collection.pollFirst();
+}
+````
+
+Le pop() de DFSIterator:
+```java
+protected Node pop() {
+    return this.collection.pollLast();
+}
+````
