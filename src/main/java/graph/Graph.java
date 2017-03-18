@@ -13,13 +13,13 @@ public class Graph implements IDirectedGraph {
 	
 	public Graph(){
 		
-		adjacence = new HashMap<Node,List<Arc>>();
+		adjacence = new HashMap<>();
 
 	}
 	/**
-	 * 
-	 * @param _n1
-	 * @param _n2
+	 *  Tells if there is an arc between 2 nodes
+	 * @param _n1 first node
+	 * @param _n2 second node
 	 * @return vrai si graph possede arc de src _n1 et destination _n2
 	 */
 	public boolean hasArc(Node _n1, Node _n2){
@@ -32,7 +32,7 @@ public class Graph implements IDirectedGraph {
 	}
 	
 	public void addNode(Node _node){
-		adjacence.put(_node, new ArrayList<Arc>());
+		adjacence.put(_node, new ArrayList<>());
 
 	}
 	
@@ -53,7 +53,7 @@ public class Graph implements IDirectedGraph {
 	
 	/**
 	 * 
-	 * @param _n
+	 * @param _n source
 	 * @return tous les arcs de source _n
 	 */
 	public List<Arc> getArc(Node _n){
@@ -70,9 +70,14 @@ public class Graph implements IDirectedGraph {
 	}
 
     @Override
-    public Iterator<Node> creerBFSIterator(Node n) {
+    public BFSIterator creerBFSIterator(Node n) {
         return new BFSIterator(this, n);
     }
+
+	@Override
+	public DFSIterator creerDFSIterator(Node n) {
+		return new DFSIterator(this, n);
+	}
 
     @Override
 	public String toString() {

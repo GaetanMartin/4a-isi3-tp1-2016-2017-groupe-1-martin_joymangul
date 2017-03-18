@@ -1,7 +1,6 @@
 package graph;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 public class UndirectedGraph implements IUndirectedGraph {
@@ -50,7 +49,12 @@ public class UndirectedGraph implements IUndirectedGraph {
 	}
 
 	@Override
-	public Iterator<Node> creerBFSIterator(Node n) {
+	public BFSIterator creerBFSIterator(Node n) {
 		return this.graph.creerBFSIterator(n);
+	}
+
+	@Override
+	public DFSIterator creerDFSIterator(Node n) {
+		return this.graph.creerDFSIterator(n);
 	}
 }

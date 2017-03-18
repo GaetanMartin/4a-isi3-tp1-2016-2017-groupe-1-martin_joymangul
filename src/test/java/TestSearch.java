@@ -55,14 +55,14 @@ public class TestSearch {
 		ug.addEdge(na, ne);
 		ug.addEdge(ne, nf);
 
-		Iterator<Node> iterugBFS= ug.creerBFSIterator(na);
+		Iterator<Node> iterugBFS= ug.creerBFSIterator(nb);
 		System.out.println("bfs:");
 		while (iterugBFS.hasNext())
 			System.out.println(iterugBFS.next());
 
-//		Iterator<Node> iterugDFS= ug.creerDFSIterator(na);
-//		System.out.println("dfs:");
-//		while (iterugDFS.hasNext())
-//			System.out.println(iterugDFS.next());
+		Iterator<Node> iterugDFS= ug.creerDFSIterator(na);
+		System.out.println("dfs:");
+		while (iterugDFS.hasNext())
+			System.out.println(iterugDFS.next());
 	}
 }
