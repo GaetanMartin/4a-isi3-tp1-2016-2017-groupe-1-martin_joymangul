@@ -35,10 +35,10 @@ public String toString() {
     return stb.toString();
 }
 ````
-Récupérer la chaïne de charactère qui représente un graph.
-Pour réaliser cela, la methode fait appel au toString() de des noeuds et des arcs.
+Récupérer la chaïne de charactère qui représente le graphe.
+Pour réaliser cela, la methode fait appel au toString() des noeuds et des arcs.
 
-L 'appel aux methodes toString() est gérer automatiquement en Java dans la focntion append()
+L 'appel aux methodes toString() est gérer automatiquement en Java au moment de l'appel de la fonction append()
 
 ## Question 2
 **Patron de conception**
@@ -52,7 +52,8 @@ Afin de limiter la duplication de code le pattern suivant est appliqué:
 
 ![Package graph](images/exo3.png)
 
-Dans la classe abstraite GraphIterator possède le code pour parcourir le graph cependant seulement le pop() doit être surchargé dans les classes BFSIterator et DFSIterator
+Dans la classe abstraite GraphIterator possède le code pour parcourir le graph cependant seulement le pop() doit être surchargé dans les classes BFSIterator et DFSIterator. On utilise une LinkedList comme collection pour avoir une structure générique qui permet de représenter à la fois une file et une pile.
+
 ```java
  public Object next() {
     if (!hasNext()) {
@@ -71,7 +72,7 @@ Dans la classe abstraite GraphIterator possède le code pour parcourir le graph 
 
 protected Node pop() {
     // TO OVERRIDE
-    return collection.getFirst();
+    return collection.pollFirst();
 }
 ````
 
