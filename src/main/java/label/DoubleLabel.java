@@ -1,4 +1,4 @@
-package graph;
+package label;
 
 public class DoubleLabel  implements Label {
 	double label;

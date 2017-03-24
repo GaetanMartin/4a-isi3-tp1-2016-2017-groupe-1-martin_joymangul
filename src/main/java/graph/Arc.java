@@ -1,5 +1,7 @@
 package graph;
 
+import label.Label;
+
 /**
  * Classe representant une arrete orientee et valuee
  * 

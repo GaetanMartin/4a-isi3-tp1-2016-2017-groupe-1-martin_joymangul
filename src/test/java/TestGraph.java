@@ -1,10 +1,10 @@
 import graph.Arc;
-import graph.DoubleLabel;
+import label.DoubleLabel;
 import graph.Graph;
 import graph.IDirectedGraph;
-import graph.IntegerLabel;
+import label.IntegerLabel;
 import graph.Node;
-import graph.StringLabel;
+import label.StringLabel;
 
 public class TestGraph {
 

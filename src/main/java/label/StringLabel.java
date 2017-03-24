@@ -1,4 +1,4 @@
-package graph;
+package label;
 
 public class StringLabel  implements Label {
 	String label;

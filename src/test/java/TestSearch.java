@@ -1,6 +1,7 @@
 import java.util.Iterator;
 
 import graph.*;
+import label.StringLabel;
 // import graph.UndirectedGraph;
 
 public class TestSearch {

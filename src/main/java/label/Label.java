@@ -1,4 +1,4 @@
-package graph;
+package label;
 
 public interface Label {
 	public Object getLabel() ;

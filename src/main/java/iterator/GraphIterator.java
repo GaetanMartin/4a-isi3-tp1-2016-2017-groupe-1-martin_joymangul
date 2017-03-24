@@ -1,4 +1,7 @@
-package graph;
+package iterator;
+
+import graph.Graph;
+import graph.Node;
 
 import java.util.*;
 

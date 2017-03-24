@@ -1,5 +1,8 @@
 package graph;
 
+import iterator.BFSIterator;
+import iterator.DFSIterator;
+
 import java.util.List;
 import java.util.Set;
 

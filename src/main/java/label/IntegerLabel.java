@@ -1,4 +1,4 @@
-package graph;
+package label;
 
 public class IntegerLabel implements Label {
 	int label;

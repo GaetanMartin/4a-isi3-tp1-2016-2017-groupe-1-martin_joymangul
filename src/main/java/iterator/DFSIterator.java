@@ -1,4 +1,7 @@
-package graph;
+package iterator;
+
+import graph.Graph;
+import graph.Node;
 
 /**
  * Created by Gaetan on 15/03/2017.

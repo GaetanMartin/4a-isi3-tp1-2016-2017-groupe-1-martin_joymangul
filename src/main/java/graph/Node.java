@@ -1,5 +1,7 @@
 package graph;
 
+import label.Label;
+
 /**
  * Classe representant un noeud etiquete pour un graph
  * 
